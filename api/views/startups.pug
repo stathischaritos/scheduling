@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 #{ message }
+        form(method='POST' action='/startups')
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='' name='name')
+          div.form-group
+            label(for='preferences') Preferences:
+            input#preferences.form-control(type='text', placeholder='' name='preferences')
+          button.btn.btn-primary(type='submit') Submit
+    .row
+      table(class="table")
+        thead
+          tr
+            th Name
+            th Preferences
+        tbody
+          each startup in startups
+            tr
+              td #{ startup.name }
+              td #{ startup.preferences }

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 #{ message }
+        // create new investor
+        form(method='POST' action='/investors')
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='' name='name')
+          button.btn.btn-primary(type='submit') Submit
+    .row
+      table(class="table")
+        thead
+          tr
+            th Name
+        tbody
+          each investor in investors
+            tr
+              td #{ investor.name }

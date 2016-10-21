@@ -1,0 +1,19 @@
+{
+  "name": "scheduling",
+  "version": "1.0.0",
+  "description": "An API service and web dashboard for solving a very particular scheduling problem",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --use_strict index.js"
+  },
+  "keywords": [
+    "scheduling"
+  ],
+  "author": "Stathis Charitos",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "mongoose": "^4.6.4",
+    "pug": "^2.0.0-beta6"
+  }
+}
